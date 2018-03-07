@@ -1,4 +1,4 @@
-package informatica.sp.senai.br.stdevelopments;
+package informatica.sp.senai.br.stdevelopment;
 
 import org.junit.Test;
 

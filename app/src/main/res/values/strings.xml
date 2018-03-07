@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">STDevelopments</string>
+    <string name="app_name">STDevelopment</string>
+    <string name="title_home">Home</string>
+    <string name="title_history">História</string>
+    <string name="title_contact">Contato</string>
+    <string name="title_list">Lista</string>
 </resources>

@@ -1,4 +1,4 @@
-package informatica.sp.senai.br.stdevelopments;
+package informatica.sp.senai.br.stdevelopment;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("informatica.sp.senai.br.stdevelopments", appContext.getPackageName());
+        assertEquals("informatica.sp.senai.br.stdevelopment", appContext.getPackageName());
     }
 }
