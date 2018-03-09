@@ -5,4 +5,9 @@
     <string name="title_contact">Contato</string>
     <string name="title_list">Lista</string>
     <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="noHaveAccount">Do not have an account</string>
+    <string name="haveAccount">Do have an account</string>
+    <string name="createAccount">create it now!</string>
+    <string name="loginAccount">login now!</string>
 </resources>
