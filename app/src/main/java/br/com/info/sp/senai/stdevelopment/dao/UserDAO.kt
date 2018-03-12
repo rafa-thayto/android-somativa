@@ -18,7 +18,13 @@ val COL_NAME = "name"
 val COL_EMAIL = "email"
 val COL_PASSWORD = "password"
 
-class UserDAO(val context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, 1) {
+class UserDAO : SQLiteOpenHelper {
+
+    val context: Context
+
+    constructor(context: Context) : super(context, DATABASE_NAME, null, 1) {
+        this.context = context
+    }
 
     override fun onCreate(db: SQLiteDatabase?) {
         val createTable = "CREATE TABLE $TABLE_NAME ( " +

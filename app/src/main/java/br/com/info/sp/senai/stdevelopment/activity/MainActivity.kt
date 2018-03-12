@@ -1,8 +1,9 @@
-package br.com.info.sp.senai.stdevelopment
+package br.com.info.sp.senai.stdevelopment.activity
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import br.com.info.sp.senai.stdevelopment.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

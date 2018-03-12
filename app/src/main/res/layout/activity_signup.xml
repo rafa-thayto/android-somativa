@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="40dp"
     android:paddingRight="40dp"
-    tools:context="br.com.info.sp.senai.stdevelopment.SignupActivity"
+    tools:context="br.com.info.sp.senai.stdevelopment.activity.SignupActivity"
     android:background="@color/background">
 
 
