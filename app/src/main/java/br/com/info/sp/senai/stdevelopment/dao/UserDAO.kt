@@ -36,13 +36,16 @@ class UserDAO : SQLiteOpenHelper {
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val sql = "DROP TABLE IF NOT EXISTS $TABLE_NAME"
+        db?.execSQL(sql)
     }
 
     fun insert (user: User) {
         val db = this.writableDatabase
-        var cv = getContentValues(user)
-        var result = db.insert(TABLE_NAME, null, cv)
+        var data = getContentValues(user)
+        var result = db.insert(TABLE_NAME, null, data)
+
+        // Response Toast message
         if (result == (-1).toLong())
             Toast.makeText(context, "Erro no cadastro", Toast.LENGTH_SHORT).show()
         else

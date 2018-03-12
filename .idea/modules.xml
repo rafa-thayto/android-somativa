@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android-somativa.iml" filepath="$PROJECT_DIR$/android-somativa.iml" />
+      <module fileurl="file://C:\Users\06929749974\Documents\github\repositories\android-somativa\android-somativa.iml" filepath="C:\Users\06929749974\Documents\github\repositories\android-somativa\android-somativa.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\06929749974\Documents\github\repositories\android-somativa\app\app.iml" filepath="C:\Users\06929749974\Documents\github\repositories\android-somativa\app\app.iml" />
     </modules>
   </component>
 </project>

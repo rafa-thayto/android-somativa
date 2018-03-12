@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import br.com.info.sp.senai.stdevelopment.R
 import br.com.info.sp.senai.stdevelopment.dao.UserDAO
@@ -25,11 +26,21 @@ class SignupActivity : AppCompatActivity() {
         }
 
         val btnSignup = findViewById<Button>(R.id.btnSignup)
-        btnSignup.setOnClickListener({
+        btnSignup.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
+
             var dao: UserDAO = UserDAO(this)
+            var name = findViewById<EditText>(R.id.etUsername)
+            var email = findViewById<EditText>(R.id.etEmail)
+            var password = findViewById<EditText>(R.id.etPassword)
+            var confirmPassword = findViewById<EditText>(R.id.etPasswordConfirm)
+            var user= User()
+
+            user.name = name
+
+            dao.insert(user)
             startActivity(intent)
-        })
+        }
 
 
     }

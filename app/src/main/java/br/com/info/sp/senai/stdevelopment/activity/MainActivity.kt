@@ -3,6 +3,9 @@ package br.com.info.sp.senai.stdevelopment.activity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import br.com.info.sp.senai.stdevelopment.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -38,4 +41,9 @@ class MainActivity : AppCompatActivity() {
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
+
+//    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+//                              savedInstanceState: Bundle?): View? {
+//        return inflater?.inflate(R.layout.fragment_rage_comic_details, container, false)
+//    }
 }

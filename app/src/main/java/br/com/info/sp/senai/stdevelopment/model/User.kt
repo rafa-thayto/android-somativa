@@ -12,7 +12,7 @@ class User {
 
     constructor()
 
-    constructor (email: String, password: String) {
+    constructor (email: String, password: String, confirmPassword: String) {
         this.name = name
         this.email = email
         this.password = password

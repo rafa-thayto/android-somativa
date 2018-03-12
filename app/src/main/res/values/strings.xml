@@ -10,4 +10,7 @@
     <string name="haveAccount">Do have an account</string>
     <string name="createAccount">create it now!</string>
     <string name="loginAccount">login now!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
