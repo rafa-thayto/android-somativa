@@ -1,34 +1,43 @@
 package br.com.info.sp.senai.stdevelopment.activity
 
+import android.app.Fragment
+import android.app.FragmentManager
+import android.app.FragmentTransaction
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.info.sp.senai.stdevelopment.R
+import br.com.info.sp.senai.stdevelopment.fragment.HomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
+inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> Unit) {
+    val fragmentTransaction = beginTransaction()
+    fragmentTransaction.func()
+    fragmentTransaction.commit()
+}
+
 class MainActivity : AppCompatActivity() {
-
-
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
-                message.setText(R.string.title_home)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_history -> {
-                message.setText(R.string.title_history)
+
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_contact -> {
-                message.setText(R.string.title_contact)
+
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_list -> {
-                message.setText(R.string.title_list)
+
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -42,8 +51,12 @@ class MainActivity : AppCompatActivity() {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 
-//    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
-//                              savedInstanceState: Bundle?): View? {
-//        return inflater?.inflate(R.layout.fragment_rage_comic_details, container, false)
+//    override fun onCreateView(name: String?, context: Context?, attrs: AttributeSet?): View? {
+//
+//        fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
+//                         savedInstanceState: Bundle?): View? {
+//            return inflater?.inflate(R.layout.fragment_home, container, false)
+//        }
 //    }
 }
+

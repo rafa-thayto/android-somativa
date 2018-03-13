@@ -34,9 +34,7 @@ class SignupActivity : AppCompatActivity() {
             var email = findViewById<EditText>(R.id.etEmail)
             var password = findViewById<EditText>(R.id.etPassword)
             var confirmPassword = findViewById<EditText>(R.id.etPasswordConfirm)
-            var user= User()
-
-            user.name = name
+            var user = User()
 
             dao.insert(user)
             startActivity(intent)
