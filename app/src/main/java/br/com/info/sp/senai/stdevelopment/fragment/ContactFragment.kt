@@ -98,5 +98,11 @@ class ContactFragment : Fragment() {
             fragment.arguments = args
             return fragment
         }
+
+        fun newInstance(): ContactFragment {
+            val fragment = ContactFragment()
+            return fragment
+        }
+
     }
 }// Required empty public constructor

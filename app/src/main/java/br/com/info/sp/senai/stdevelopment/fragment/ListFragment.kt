@@ -98,5 +98,10 @@ class ListFragment : Fragment() {
             fragment.arguments = args
             return fragment
         }
+
+        fun newInstance(): ListFragment {
+            val fragment = ListFragment()
+            return fragment
+        }
     }
 }// Required empty public constructor

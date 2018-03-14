@@ -12,7 +12,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.com.info.sp.senai.stdevelopment.R
+import br.com.info.sp.senai.stdevelopment.fragment.ContactFragment
+import br.com.info.sp.senai.stdevelopment.fragment.HistoryFragment
 import br.com.info.sp.senai.stdevelopment.fragment.HomeFragment
+import br.com.info.sp.senai.stdevelopment.fragment.ListFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> Unit) {
@@ -24,23 +27,29 @@ inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> Unit) {
 class MainActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        var selectedFragment: android.support.v4.app.Fragment? = null
         when (item.itemId) {
             R.id.navigation_home -> {
+                selectedFragment = HomeFragment.newInstance()
+
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_history -> {
-
+                selectedFragment = HistoryFragment.newInstance()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_contact -> {
-
+                selectedFragment = ContactFragment.newInstance()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_list -> {
-
+                selectedFragment = ListFragment.newInstance()
                 return@OnNavigationItemSelectedListener true
             }
         }
+        var ft: android.support.v4.app.FragmentTransaction? = supportFragmentManager.beginTransaction()
+        ft?.replace(R.id.navigation, selectedFragment)
+        ft?.commit()
         false
     }
 

@@ -98,5 +98,10 @@ class HistoryFragment : Fragment() {
             fragment.arguments = args
             return fragment
         }
+
+        fun newInstance(): HistoryFragment {
+            val fragment = HistoryFragment()
+            return fragment
+        }
     }
 }// Required empty public constructor

@@ -34,6 +34,10 @@ class HomeFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+    }
+
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -96,6 +100,11 @@ class HomeFragment : Fragment() {
             args.putString(ARG_PARAM1, param1)
             args.putString(ARG_PARAM2, param2)
             fragment.arguments = args
+            return fragment
+        }
+
+        fun newInstance(): HomeFragment {
+            val fragment = HomeFragment()
             return fragment
         }
     }
