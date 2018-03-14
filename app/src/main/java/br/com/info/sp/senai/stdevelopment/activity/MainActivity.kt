@@ -27,35 +27,40 @@ inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> Unit) {
 class MainActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        var selectedFragment: android.support.v4.app.Fragment? = null
         when (item.itemId) {
             R.id.navigation_home -> {
-                selectedFragment = HomeFragment.newInstance()
-
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, HomeFragment())
+                        .commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_history -> {
-                selectedFragment = HistoryFragment.newInstance()
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, HistoryFragment())
+                        .commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_contact -> {
-                selectedFragment = ContactFragment.newInstance()
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, ContactFragment())
+                        .commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_list -> {
-                selectedFragment = ListFragment.newInstance()
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, ListFragment())
+                        .commit()
                 return@OnNavigationItemSelectedListener true
             }
         }
-        var ft: android.support.v4.app.FragmentTransaction? = supportFragmentManager.beginTransaction()
-        ft?.replace(R.id.navigation, selectedFragment)
-        ft?.commit()
         false
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        supportFragmentManager.beginTransaction().add(R.id.container, HomeFragment())
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
